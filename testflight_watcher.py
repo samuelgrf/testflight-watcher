@@ -5,6 +5,7 @@ import requests
 from lxml import html
 import re
 from time import sleep
+from datetime import datetime
 
 
 XPATH_STATUS = '//*[@class="beta-status"]/span/text()'
@@ -24,6 +25,9 @@ def watch(watch_ids, callback, notify_full=True, sleep_time=10):
                 headers={"Accept-Language": "en-us"})
             page = html.fromstring(req.text)
             free_slots = page.xpath(XPATH_STATUS)[0] not in FULL_TEXTS
+
+            print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'),'-',
+                page.xpath(XPATH_STATUS)[0])
 
             if (tf_id not in data or data[tf_id] != free_slots):
                 if free_slots or notify_full:
