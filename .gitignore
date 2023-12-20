@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Telegram variables and tokens
+telegram_bot_vars.py

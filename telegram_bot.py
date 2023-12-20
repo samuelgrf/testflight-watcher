@@ -4,10 +4,9 @@
 import testflight_watcher
 import requests
 import sys
+from telegram_bot_vars import *
 
 
-CHAT_ID = ""
-BOT_TOKEN = ""
 BOT_URL = "https://api.telegram.org/bot{}/sendMessage".format(BOT_TOKEN)
 MSG_NO_FULL = "TestFlight slots for <b>{}</b> beta are now available! \
 <a href='{}'>Download now</a>"
