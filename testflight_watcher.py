@@ -16,7 +16,7 @@ FULL_TEXTS = ['This beta is full.',
               "This beta isn't accepting any new testers right now."]
 
 
-def watch(watch_ids, callback, notify_full=True, sleep_time=10):
+def watch(watch_ids, callback, notify_full=False, sleep_time=10):
     data = {}
     while True:
         for tf_id in watch_ids:
