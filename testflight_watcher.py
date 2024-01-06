@@ -13,7 +13,9 @@ XPATH_TITLE = '/html/head/title/text()'
 TITLE_REGEX = r'Join the (.+) beta - TestFlight - Apple'
 TESTFLIGHT_URL = 'https://testflight.apple.com/join/{}'
 FULL_TEXTS = ['This beta is full.',
-              "This beta isn't accepting any new testers right now."]
+              "This beta isn't accepting any new testers right now."
+              'Dieser Beta-Test ist voll.'
+              'Diese Beta-App akzeptiert derzeit keine neuen Tester.']
 
 
 def watch(watch_ids, callback, notify_full=False, sleep_time=10):
